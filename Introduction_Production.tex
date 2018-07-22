@@ -1,0 +1,75 @@
+\subsection{Xenon Production and Evolution}
+
+Xenon and its progenitors are produced as fission products.  It is assumed that neutron induced fission is the only significant source of fission in an MSR, and fission pathways such as photofission or muon induced fission from extraterrestrial radiation are insubstantial.  The fission production rate is given by,
+
+\begin{equation}
+    \dot{N} = \int \int_{RC} \gamma_i \Sigma_f(E,\vec{x}) \phi(E,\vec{x}) dV dE
+\end{equation}
+
+where the volume of integration is the reactor core volume (i.e., not the external loop).  The fission yield, $\gamma_i$,  gives a probability of producing a particular fission nuclide and depends on the actinide in which the fission occurs, and the incident neutron energy.  The Japanese Atomic Energy Agency maintains a user friendly database of fission product yields (JENDL). \cite{JENDLFP}  A table detailing the fission product yields of xenon and its progenitors of some actinides found in nuclear fuel is shown in table \ref{tbl_fp}.
+\input{tbl_fp.tex}
+Two observations can be made from this table.  First, Xe-135 is consistently has the smallest fission product compared to I-135 and Te-135.  Therefore  xenon poisoning predominately arises from the progenitor inventory rather than directly from fission. Second since the nuclear fuel changes actinide composition with burn-up, and the fission yield is a function of actinide it occurs in, it follows that the xenon poisoning will also change.
+
+The time evolution of xenon in the system, without any mass transfer, can be described by set of three coupled ordinary differential equations,
+
+\begin{subequations}
+\begin{align}
+\dot{N}_{Xe} &=  \gamma_{Xe} \Sigma_f \phi V_{RC} + \lambda_I N_I -\lambda_{Xe} N_{Xe} - \Sigma_a^{Xe} \phi V_{RC}, \\
+\dot{N}_I &=\gamma_{I} \Sigma_f \phi V_{RC} - \lambda_I N_I + \lambda_{Te} N_{Te}, \\
+\dot{N}_{Te} &= \gamma_{Te} \Sigma_f \phi V_{RC} - \lambda_{Te} N_{Te} .
+\end{align}
+\end{subequations}
+
+Appendix A of ORNL-TM-4541 provides the rate balance equations,
+
+
+
+\begin{subequations}
+\begin{align}
+ \begin{split}
+    \{Generation\;rate\} =&\;\{burnup\;rate\;in\;salt\} \\
+    & +  \{migration\;rate\;to\;graphite\} \\ &+\{migration\;rate\;to\;bubbles\} ,
+  \end{split} \\ 
+  \begin{split}
+   \{Migration\;rate\;to\;graphite\} = &\;\{decay\;rate\;in\;graphite\}  \\
+    & + \{burnup\;in\;graphite\} ,
+  \end{split} \\
+    \begin{split}
+   \{Migration\;rate\;to\;bubbles\} = &\;\{decay\;rate\;in\;bubbles\}  \\
+    & + \{burnup\;in\;bubbles\} \\
+    & +  \{stripping\;rate\;in\;bubbles\}.
+  \end{split}
+\end{align}
+\end{subequations}
+
+for noble gasses in an MSR. \cite[p. 170]{Robertson1971}  A typical migration term can be expressed in the form,
+\begin{equation}
+    \{Migration\;rate\} = k_m A (C - C_{int}).\;[ibid.] 
+    \label{eqn_migration}
+\end{equation}
+The derivation of expressions for migration rates will be discussed later. .  It is then seen that the quantity of xenon in the system is a function of time,
+\begin{equation}
+    N_{Xe} = N_{Xe}(t).
+\end{equation}
+
+The macroscopic absorption cross-section is the probability that a neutron, traveling through a medium have probability, $\Sigma_a$, per unit path length of becoming absorbed in the medium.  The macroscopic absorption cross-section can be conceptualized as having two components, the absorption cross section of the reactor material itself, $\Sigma_a^r$ , and the absorption cross section of the xenon in the system, $\Sigma_a^{Xe}$ .  Thus, we can express the absorption cross section of the reactor as,
+\begin{equation}
+\Sigma_a = \Sigma_a^{r} + \Sigma_a^{Xe}.
+\end{equation}
+
+Seeing that the xenon number density in the reactor is a function of time, it follows that the macroscopic absorption cross section is likewise a function of time,
+
+\begin{equation}
+    \Sigma_a = \Sigma_a(t) = \Sigma_a^r + \sigma_a^{Xe}N_{Xe}(t)
+\end{equation}
+
+The neutron diffusion equation can be written
+
+\begin{equation}
+\frac{1}{v} \dot{\phi} = \nu\Sigma_f\phi - ( \Sigma_a^r + \sigma_a^{Xe}N_{Xe}(t)) \phi - \nabla^2\phi.
+\end{equation}It is thus seen that the presence of xenon in the system affects the time-evolution of neutron flux in the reactor. 
+
+TODO: 
+
+
+

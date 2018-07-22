@@ -1,0 +1,55 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{authblk}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{ctable}
+\usepackage{tabu}
+\usepackage{hyperref}
+\usepackage{svg}
+\usepackage{gensymb}
+\usepackage[
+backend=biber,
+style=numeric,
+]{biblatex}
+\usepackage{tabularx} % in the preamble
+
+\addbibresource{bib.bib}
+\graphicspath{{GFX/}}
+
+\title{MSR Xenon Analysis: Review and Decomposition}
+\author[1]{Terry J. Price\thanks{Terry.Price@uoit.net}}
+\author[1]{Ondrej Chvala\thanks{OChvala@utk.edu}}
+\affil[1]{University of Ontario Institute of Technology}
+\affil[2]{University of Tennessee Knoxville}
+\date{July 2018}
+
+\begin{document}
+
+\maketitle
+
+
+\input{Introduction.tex}
+
+%graphite stringer grammer
+
+%Considerations for calculations
+
+\input{Assumptions.tex}
+
+\input{GraphiteStringer.tex}
+
+\input{MT.tex}
+
+
+
+\section{TODO}
+The potential for parameterization/operationalization/generalization catastrophe
+Geometric index, biot number, and irregular shapes.
+
+TODO: MORE ABOUT THE STATE.
+\printbibliography
+
+\end{document}
+
+

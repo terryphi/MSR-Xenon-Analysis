@@ -1,0 +1,51 @@
+\subsection{Diffusion}
+There are two diffusion coefficients used in the formulation of MSR xenon theory, one for diffusion within the graphite, and another for diffusion within the fuel-salt. 
+
+The diffusion coefficient in the graphite is a function of the atomic mass of the diffusing species; ORNL-4069 states two different graphite mass diffusion coefficients were used in their calculations, one for Xenon and one for Krypton. \cite[p. 65]{ORNL4069} The porous media mass diffusion coefficient  encapsulates a number of mechanistically different diffusion phenomena such as viscous diffusion, Knudsen diffusion, surface diffusion, and molecular sieving. \cite[p. 190]{Cussler07}  The Knudsen mechanism was the dominate mechanism of diffusion in MSRE graphite. \cite[p. 37]{ORNL4148}  The Knudsen diffusion coefficient can be predicted from the expression,
+\begin{equation}
+    \label{eq:knDiff}
+    D_{Kn} = \frac{L_{Pore}}{3} \left( \frac{2K_B  T}{m} \right)^{1/2}.\;  \text{\cite[p.194]{Cussler07}}
+\end{equation} 
+ORNL-4389 states after impregnation, the primary peak of the MSRE graphite porosity distribution occurred at 80 nm. \cite[p. 12]{ORNL4389}  The MSRE graphite temperature was between 952 and 977 K. \cite[p. 56]{Robertson1971} Given these parameters, equation \ref{eq:knDiff} evaluates to $8.7\times10^{-7} cm^2/s$, which is within the range of mass diffusion coefficients,  $3.0\times10^{-8} $ to $8.7\times10^{-5} cm^2/s$ considered feasible in the MSRE. \cite[p. 54]{ORNLTM3464}
+
+The mass diffusion coefficient for xenon in liquid fuel-salt is used in the calculation of mass-transfer coefficients through the Sherwood number,
+\begin{equation}
+    Sh = \frac{k_m L}{D},
+\end{equation}
+which is given from mass transfer correlations of the form,
+\begin{equation}
+    Sh = f(Re,Sc) \text{\cite[p. 257]{Cussler07}}
+\end{equation}
+ORNL-4069 sates the mass diffusion coefficient can be found through analogy to a heavy-metal, water system; however, the way in which this is done was cited as a personal communication to C. Chester. \cite[p p.62]{ORNL4069} Details about the use of a water analog in a molten metal system were found in a paper by Kang et al. \cite[p. 107]{Muruganant2017} 
+
+In addition to the heavy-metal, water analog, ORNL-4069 state the mass diffusion coefficient may be found through the Wilk-Chang equation and Stokes-Einstien equation. \cite[p. 62]{ORNL4069}
+The Einstien Stokes equation,
+\begin{equation}
+    D = \frac{K_B T}{6 \pi \mu r_{Xe} },
+\end{equation}
+requires three parameters, the temperature, the viscosity, and the Atomic radii. \cite[p. 127]{Cussler07}    Viscosity data can be found in the sources by Cantor, Janz and Sohal as described in section \ref{sec:fuelSaltProperties}.\cite{ORNLTM2316,Sohal2010,Janz2013} We are unsure about what atomic radii data would be best suited for calculations.The Einstien-Stoke equation is derived assuming the diffusing particle is a hard sphere. Pau, Berg, and McMillan state, in the context of Stokes law,
+\begin{quote}
+    "One of the most difficult questions involved in the transition from a continuum medium to the case of real solvent molecules of size comparable to the atomic dimensions of the mobile ion is unit is the meaning to be attached to the particle 'radius'". \cite{Pau90}
+\end{quote}
+
+Several potential atomic radii are listed in table \ref{tbl:radius}. 
+\input{tbl_radius.tex}
+
+Given the radiation field present in an MSR, 
+
+An additional complexity arises in considering the effect xenon ionization has on the atomic radius.  Born states,
+
+\begin{quote}
+    "We see\footnote{in an attached tabulation of ionic radii } that the negative ions, which have an inert gas configuration with a smaller nuclear charge then the corresponding inert gas, are larger than the latter, the reason being of course tha the electrons in these ions are more loosely bound so that their orbits have greater radii.  A corresponding, mutatis mutandis, hold for positive ions also."
+\end{quote}
+Thus, the ionic radius is a function of the degree of ionization of the xenon. 
+
+According to James, the average kinetic energy of fission fragments is in excess of 160 MeV. \cite{James69} Oberstedt, Bilnert, and Gatera state the prompt gamma ray energy from U-235 fission is in excess of 6 MeV.\cite[p. 86]{Oberstedt15}  In addition to these sources of energy, we assert there exists radiation, in the form of alpha, beta, and gamma emanation, from the fission fragments. The sum of all the ionization energies in xenon is ~0.2 MeV. \cite{NIST_XE}  It therefore follows the radiation field in an MSR is capable of completely ionizing any xenon in the reactor.
+
+Since the ionic radius is a function of the degree of ionization, and the xenon in a MSR may be ionized, it follows that any consideration into atomic radius ought to consider the effect of ionization on the atomic radius.  A corollary to this is the data in talbe \ref{tbl:radius} may be greater than the effective atomic radius of xenon an in MSR.  Furthermore, since,
+\begin{equation}
+    Sh \propto \frac{1}{D} \wedge D \propto \frac{1}{r_{Xe}} \implies Sh \propto r_{Xe} \implies k_m \propto r_{Xe},
+\end{equation}
+it follows that the mass transfer coefficients, $k_m$, in a nuclear system will be lower than those in a non-nuclear mockup. 
+
+liquid: ways to do it on p.62
